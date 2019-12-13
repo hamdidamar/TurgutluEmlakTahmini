@@ -1,19 +1,10 @@
 import streamlit as st
-import numpy as np
-import matplotlib.pyplot as plt
 import pandas as pd
-import os
-import random
-import pandas_profiling
-import seaborn as sns
+import numpy as np
 from sklearn.externals import joblib
 
-
+def main():
     #Sidebars
-    menuler = ["Hakkinda","Tahmin Yap!","Turgutlu Istatistlik"]
-    secim = st.sidebar.selectbox("Menu Seciniz...",menuler)
-
-    if secim == 'Tahmin Yap!':
 
         #Text/Title
         st.title("Turgutlu Emlak Tahmini")
@@ -110,16 +101,10 @@ from sklearn.externals import joblib
             #Ballons
             st.balloons()
 
-    if secim == 'Turgutlu Istatistlik':
-        #Görselleştirme
         
-        
-    if secim == 'Hakkinda':
-        st.write("Hamdi Damar 172802029")
-        st.write("Cihan Cifci 172802019")
-        st.write("Tarafindan Gelistirilmistir.!")
 
-
+if __name__ == '__main__':
+    main()
 
 
 
