@@ -1,0 +1,48 @@
+{% extends "bootstrap/base.html" %}
+{% block content %}
+
+
+
+<div class="container">
+	
+	<div class="jumbotron" style="background-color: blue">
+
+		<h2 style="color: white " >Turgutlu Emlak Tahmin Uygulaması</h2>
+		<p style="color: white">Bootstrap ve Flask ile Makine Öğrenmesi Uygulaması</p>
+		
+	</div>
+
+	<div class="">
+		<form method="POST" action="{{ url_for('predict')}}">
+			<label>Mahalle</label>
+			<input type="text" name="mahalle"><br>
+			<label>Banyo Sayısı</label>
+			<input type="text" name="banyo"><br>
+			<label>Bina Toplam Kat Sayısı</label>
+			<input type="text" name="katsayi"><br>
+			<label>Bina Yaşı</label>
+			<input type="text" name="yas"><br>
+			<label>Bulunduğu Kat</label>
+			<input type="text" name="bulundugukat"><br>
+			<label>Eşya Durumu</label>
+			<input type="text" name="esyadurum"><br>
+			<label>Isıtma Tipi</label>
+			<input type="text" name="isitma"><br>
+			<label>Oda Sayisi(+1)</label>
+			<input type="text" name="oda"><br>
+			<label>Metrekare(Net)</label>
+			<input type="text" name="metrekare"><br>
+			<button type="submit" class="btn btn-primary">Tahmin Yap</button>
+
+		</form>
+	</div>
+
+</div>
+
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" 
+	  href="{{url_for('.static',filename='css/styles.css')}}">
+{% endblock %}
