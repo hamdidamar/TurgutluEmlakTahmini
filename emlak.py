@@ -99,7 +99,7 @@ def main():
             #Ballons
             st.balloons()
             
-        st.write("Hamdi Damar,Cihan Çiftçi Tarafından Geliştirilmiştir..")
+        st.write("Hamdi Damar,Cihan Çifci Tarafından Geliştirilmiştir..")
 
         
 
