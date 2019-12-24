@@ -98,6 +98,8 @@ def main():
             st.write("Emlak Degeri :",tahmin_sonuc,"000 TL")
             #Ballons
             st.balloons()
+            
+        st.write("Hamdi Damar,Cihan Çiftçi Tarafından Geliştirilmiştir..")
 
         
 
