@@ -76,7 +76,7 @@ def main():
           'Mahalle':[mahalle_index],'Metrekare(net)':[metrekare],'Oda_Sayisi(+1)':[oda]})
         
         #SelectBox
-        model = st.selectbox("Model",["Desicion Tree","Random Forest","SVR"])
+        model = st.selectbox("Model",["Desicion Tree","Random Forest"])
         st.write(" Model :",model)
         
         if model == 'Desicion Tree':
@@ -87,9 +87,7 @@ def main():
             rf = joblib.load('random_forest_model.pkl')
             prediction = rf.predict(res)
             
-        if model == 'SVR':
-            svr = joblib.load('svr_model.pkl')
-            prediction = svr.predict(res)
+        
 
         #Tahmin değerini stringe dönüştürme
         prediction = np.round(prediction)#yuvarlama
